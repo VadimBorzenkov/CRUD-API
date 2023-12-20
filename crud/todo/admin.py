@@ -1,0 +1,8 @@
+from django.contrib import admin
+
+from todo.models import Todo
+
+
+@admin.register(Todo)
+class TodoAdmin(admin.ModelAdmin):
+    search_fields = ('title', 'description', 'completed')
